@@ -5,16 +5,16 @@
 
 # The variable USPersonalExpenditure is now accessible to you. Unfortunately, it's not a data.frame
 # Test this using the is.data.frame function
-
+is.data.frame(USPersonalExpenditure)
 
 # Luckily, you can simply pass the USPersonalExpenditure variable to the data.frame function
 # to convert it a data.farme
 
 # Create a new variable by passing the USPersonalExpenditure to the data.frame function
-
+expenditure <- data.frame(USPersonalExpenditure)
 
 # What are the column names of your dataframe?
-
+#x1940, x1945, x1950, x1955
 
 # Why are they so strange?
 
@@ -23,10 +23,10 @@
 
 
 # Create a column `category` that is equal to your rownames
-
+expenditure$category <- rownames(expenditure)
 
 # How much money was spent on personal care in 1940?
-
+care.1940 <- expenditure['Personal Care', 'X1940'] 
 
 # How much money was spent on Food and Tobacco in 1960
 
